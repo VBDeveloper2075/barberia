@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Panel del dueño | Chivas Barbería</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <main class="simple-page" id="login-view" hidden>
+    <section class="card">
+      <img class="page-logo" src="/img/favicon.svg" alt="">
+      <p class="eyebrow">Chivas Barbería</p>
+      <h1>Acceso dueño</h1>
+      <form id="login-form" novalidate>
+        <label>Usuario
+          <input name="username" autocomplete="username" required>
+        </label>
+        <label>Clave
+          <input name="password" type="password" autocomplete="current-password" required>
+        </label>
+        <p class="form-error" id="login-error" role="alert" hidden></p>
+        <button class="btn btn-primary" type="submit" id="login-btn">Ingresar</button>
+      </form>
+      <p class="note small"><a href="/">Volver al sitio</a></p>
+    </section>
+  </main>
+
+  <div id="dash-view" hidden>
+    <header class="site-header">
+      <div class="brand">
+        <img class="brand-logo" src="/img/favicon.svg" alt="">
+        <span class="brand-text">Panel <small>Chivas Barbería</small></span>
+      </div>
+      <div class="admin-actions">
+        <a href="/" class="btn btn-ghost btn-sm">Ver sitio</a>
+        <button class="btn btn-ghost btn-sm" id="logout" type="button">Salir</button>
+      </div>
+    </header>
+
+    <main class="dash">
+      <section class="stats" aria-label="Resumen">
+        <div class="stat"><span class="stat-n" id="st-today">–</span><span class="stat-l">Turnos hoy</span></div>
+        <div class="stat"><span class="stat-n" id="st-upcoming">–</span><span class="stat-l">Próximos</span></div>
+        <div class="stat"><span class="stat-n" id="st-deposits">–</span><span class="stat-l">Señas del mes</span></div>
+        <div class="stat" id="st-attention-box" hidden><span class="stat-n" id="st-attention">0</span><span class="stat-l">Requieren atención</span></div>
+      </section>
+
+      <div class="toolbar">
+        <div class="filters" role="tablist" aria-label="Filtro de turnos">
+          <button class="chip" data-scope="upcoming" aria-pressed="true">Próximos</button>
+          <button class="chip" data-scope="today" aria-pressed="false">Hoy</button>
+          <button class="chip" data-scope="past" aria-pressed="false">Historial</button>
+          <button class="chip" data-scope="pending" aria-pressed="false">Esperando pago</button>
+          <button class="chip" data-scope="attention" aria-pressed="false">Atención</button>
+          <button class="chip" data-scope="cancelled" aria-pressed="false">Cancelados</button>
+        </div>
+        <input type="search" id="search" placeholder="Buscar por nombre, teléfono o email" aria-label="Buscar cliente">
+      </div>
+
+      <p class="muted" id="empty" hidden>No hay turnos para mostrar.</p>
+      <div class="table-wrap">
+        <table id="table" hidden>
+          <thead>
+            <tr><th>Día</th><th>Hora</th><th>Cliente</th><th>Contacto</th><th>Servicio</th><th>Seña</th><th>Fidelidad</th><th>Estado</th><th></th></tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <p class="note small">Fidelidad: cortes completados por el cliente (se cuenta al marcar “Realizado”). Los cancelados con seña paga deben reembolsarse desde Mercado Pago.</p>
+    </main>
+  </div>
+
+  <script src="/js/admin.js" type="module"></script>
+</body>
+</html>

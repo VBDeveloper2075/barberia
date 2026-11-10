@@ -1,0 +1,64 @@
+#login-form { text-align: left; margin-top: 1rem; }
+#login-form .btn { width: 100%; margin-top: 0.4rem; }
+
+.admin-actions { display: flex; gap: 0.5rem; }
+.btn-sm { padding: 0.5rem 1rem; font-size: 0.72rem; letter-spacing: 0.12em; }
+
+.dash { max-width: 1250px; margin: 0 auto; padding: 1.6rem clamp(1rem, 3vw, 2rem) 3rem; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.8rem; margin-bottom: 1.6rem; }
+.stat { background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; }
+.stat-n { display: block; font-family: var(--font-title); font-weight: 800; font-size: 1.9rem; line-height: 1.1; }
+.stat-l { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--silver); font-family: var(--font-title); }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.chip {
+  cursor: pointer; font-family: var(--font-title); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem;
+  background: transparent; color: var(--cream); border: 1px solid var(--line); border-radius: 999px; padding: 0.5rem 1rem;
+}
+.chip:hover { border-color: var(--silver); }
+.chip[aria-pressed="true"] { background: var(--cream); color: var(--bg); border-color: var(--cream); }
+#search {
+  flex: 1 1 240px; max-width: 360px; padding: 0.65rem 0.9rem; font: inherit; font-size: 0.9rem; color: var(--cream);
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px;
+}
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-2); }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+th {
+  text-align: left; font-family: var(--font-title); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--silver); padding: 0.8rem 0.9rem; border-bottom: 1px solid var(--line); white-space: nowrap;
+}
+td { padding: 0.8rem 0.9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+tbody tr:last-child td { border-bottom: 0; }
+td .sub { display: block; color: var(--muted); font-size: 0.8rem; }
+td.nowrap { white-space: nowrap; }
+td a { color: var(--cream); }
+
+.badge {
+  display: inline-block; font-family: var(--font-title); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  font-size: 0.66rem; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--silver); color: var(--silver); white-space: nowrap;
+}
+.badge.confirmed { background: var(--cream); color: var(--bg); border-color: var(--cream); }
+.badge.completed { background: var(--silver); color: var(--bg); border-color: var(--silver); }
+.badge.cancelled, .badge.refund { border-color: var(--danger); color: var(--danger); }
+.badge.free { background: var(--cream); color: var(--bg); }
+
+.row-actions { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.row-actions button {
+  cursor: pointer; font-family: var(--font-title); font-weight: 700; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em;
+  background: transparent; color: var(--cream); border: 1px solid var(--line); border-radius: 8px; padding: 0.4rem 0.65rem; white-space: nowrap;
+}
+.row-actions button:hover { border-color: var(--cream); }
+
+@media (max-width: 800px) {
+  .table-wrap { border: 0; background: none; overflow: visible; }
+  table, tbody, tr, td { display: block; }
+  thead { display: none; }
+  tr { background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.6rem 0.4rem; margin-bottom: 0.8rem; }
+  td { border: 0; padding: 0.3rem 0.8rem; display: flex; justify-content: space-between; gap: 1rem; text-align: right; }
+  td::before { content: attr(data-label); color: var(--muted); font-family: var(--font-title); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; text-align: left; }
+  td.actions-cell { justify-content: flex-end; }
+  td.actions-cell::before { content: none; }
+}

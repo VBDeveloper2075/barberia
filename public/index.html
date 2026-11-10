@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chivas Barbería | Peluquería masculina en Villa Devoto</title>
+  <meta name="description" content="Chivas Barbería, peluquería masculina en Villa Devoto (Pedro Lozano 4372). Cortes, degradé y barba. Reservá tu turno online y sumá sellos para tu corte gratis.">
+  <meta property="og:title" content="Chivas Barbería | Peluquería masculina en Villa Devoto">
+  <meta property="og:description" content="Cortes, degradé y barba. Reservá tu turno online y sumá sellos para tu corte gratis.">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Chivas Barbería",
+    "description": "Barbería y peluquería masculina en Villa Devoto.",
+    "address": { "@type": "PostalAddress", "streetAddress": "Pedro Lozano 4372", "addressLocality": "Villa Devoto", "addressRegion": "Buenos Aires", "addressCountry": "AR" },
+    "sameAs": ["https://www.instagram.com/chivas.barber"],
+    "hasMap": "https://maps.app.goo.gl/3KPX6y5L3neThSZM9"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Logo (escudo CHIVAS). Reemplazable por el logo original editando este símbolo. -->
+  <svg class="sprite" width="0" height="0" aria-hidden="true">
+    <defs>
+      <symbol id="goat" viewBox="0 0 100 100">
+        <path d="M37 40C25 39 19 27 27 17c-1 9 5 15 15 17z" fill="currentColor"/>
+        <path d="M63 40c12-1 18-13 10-23 1 9-5 15-15 17z" fill="currentColor"/>
+        <path d="M36 42 22 46l15 7z" fill="currentColor"/>
+        <path d="M64 42l14 4-15 7z" fill="currentColor"/>
+        <path d="M37 36h26l-3 30-10 14-10-14z" fill="currentColor"/>
+        <path d="M44 74c2 8 4 14 6 20 2-6 4-12 6-20-4 4-8 4-12 0z" fill="currentColor"/>
+        <path d="M42 50l6 3M58 50l-6 3" stroke="#121210" stroke-width="2.4" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="logo" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="97" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="100" cy="100" r="91" fill="#121210" stroke="currentColor" stroke-width="5"/>
+        <path id="logo-arc" d="M40 96A60 60 0 0 1 160 96" fill="none"/>
+        <text font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="12" letter-spacing="3.5" fill="currentColor">
+          <textPath href="#logo-arc" startOffset="50%" text-anchor="middle">BARBERSHOP</textPath>
+        </text>
+        <use href="#goat" x="70" y="38" width="60" height="60" color="currentColor"/>
+        <path d="M52 104l16 7-16 7M148 104l-16 7 16 7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="100" y="146" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="30" letter-spacing="1" fill="currentColor">CHIVAS</text>
+        <path d="M58 154h84" stroke="currentColor" stroke-width="1.2"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="announce" href="#promos" data-tab-link="promos">
+    <strong>Corte gratis:</strong> sumá sellos en tu tarjeta de fidelidad <span aria-hidden="true">→</span>
+  </a>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Chivas Barbería, inicio">
+      <svg class="brand-logo" viewBox="0 0 200 200" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="brand-text">Chivas <small>Barbería</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Principal">
+      <a href="#servicios" data-tab-link="servicios">Servicios</a>
+      <a href="#promos" data-tab-link="promos">Promos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <svg class="hero-logo" viewBox="0 0 200 200" role="img" aria-label="Chivas Barbershop"><use href="#logo"/></svg>
+      <p class="eyebrow">Barbería · Peluquería masculina · Villa Devoto</p>
+      <h1>Cortes y barba <br>con estilo</h1>
+      <p class="lead">Elegí tu servicio, reservá tu turno online y abonás la seña para asegurarlo.</p>
+      <a class="btn btn-primary" href="#servicios" data-tab-link="servicios">Ver servicios y reservar</a>
+      <ul class="highlights" aria-label="Por qué elegirnos">
+        <li>Turnos online, sin esperas</li>
+        <li>Corte gratis con tu tarjeta</li>
+        <li>Pedro Lozano 4372</li>
+      </ul>
+    </section>
+
+    <section class="panel-section" id="servicios-promos">
+      <div class="tabs" role="tablist" aria-label="Servicios y promociones">
+        <button class="tab" role="tab" id="tab-servicios" aria-controls="panel-servicios" aria-selected="true" data-tab="servicios">Servicios</button>
+        <button class="tab" role="tab" id="tab-promos" aria-controls="panel-promos" aria-selected="false" data-tab="promos">Promos</button>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" id="panel-servicios" aria-labelledby="tab-servicios">
+        <h2 class="section-title">Nuestros servicios</h2>
+        <p class="section-sub">Tocá un servicio para ver su descripción y elegir tu turno.</p>
+        <div class="service-grid" id="service-grid" aria-live="polite">
+          <p class="muted">Cargando servicios…</p>
+        </div>
+        <p class="note">Para confirmar el turno se abona una seña de <strong id="deposit-note">$1.000</strong>, que se descuenta del valor del servicio.</p>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" id="panel-promos" aria-labelledby="tab-promos" hidden>
+        <h2 class="section-title">Promos</h2>
+        <p class="section-sub">Premiamos tu fidelidad.</p>
+
+        <div class="promo">
+          <div class="loyalty-card" id="loyalty-card" aria-label="Tarjeta de fidelidad de Chivas Barbería">
+            <p class="loyalty-brand">Chivas Barbería</p>
+            <h3 class="loyalty-title">Tarjeta de fidelidad</h3>
+            <p class="loyalty-address">Pedro Lozano 4372</p>
+            <div class="stamps" id="stamps"></div>
+            <p class="loyalty-thanks">¡Gracias por elegirnos!</p>
+          </div>
+
+          <div class="promo-info">
+            <p class="eyebrow">Corte gratis</p>
+            <h3>Cada corte suma un sello</h3>
+            <p>Pedí tu tarjeta de fidelidad en el local. Con cada corte te sellamos un casillero y al completar los <strong id="stamp-count">7</strong> sellos, <strong>tu siguiente corte es gratis</strong>.</p>
+            <a class="btn btn-primary" href="#servicios" data-tab-link="servicios">Reservar mi turno</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="insta" aria-labelledby="insta-title">
+      <p class="eyebrow">Instagram</p>
+      <h2 id="insta-title">Mirá nuestros cortes</h2>
+      <p>Videos, trabajos y novedades de la barbería. Seguinos y escribinos por mensaje directo.</p>
+      <a class="btn btn-ghost" id="ig-cta" href="https://www.instagram.com/chivas.barber" target="_blank" rel="noopener">Seguir a @chivas.barber</a>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <svg class="footer-logo" viewBox="0 0 200 200" aria-hidden="true"><use href="#logo"/></svg>
+    <div>
+      <h2>Chivas Barbería</h2>
+      <p><span class="label">Dirección</span> <a id="address-link" href="https://maps.app.goo.gl/3KPX6y5L3neThSZM9" target="_blank" rel="noopener">Pedro Lozano 4372, Villa Devoto (ver mapa)</a></p>
+      <p><span class="label">Instagram</span> <a id="ig-link" href="https://www.instagram.com/chivas.barber" target="_blank" rel="noopener">@chivas.barber</a></p>
+      <p><span class="label">Horarios</span> <span id="hours-text">Lunes a sábados de 10 a 20 h</span></p>
+    </div>
+    <p class="thanks">¡Gracias por elegirnos!</p>
+    <a class="admin-link" href="/admin">Acceso dueño</a>
+  </footer>
+
+  <!-- Reserva: descripción → turno → datos y pago -->
+  <dialog class="booking" id="booking" aria-labelledby="booking-title">
+    <button class="dialog-close" id="booking-close" aria-label="Cerrar">&times;</button>
+    <ol class="steps" aria-label="Pasos de la reserva">
+      <li data-step="1">Servicio</li>
+      <li data-step="2">Turno</li>
+      <li data-step="3">Pago</li>
+    </ol>
+
+    <div class="step" data-panel="1">
+      <p class="eyebrow">Descripción</p>
+      <h2 id="booking-title"></h2>
+      <p class="service-desc" id="svc-desc"></p>
+      <dl class="svc-facts">
+        <div><dt>Duración</dt><dd id="svc-duration"></dd></div>
+        <div><dt>Precio</dt><dd id="svc-price"></dd></div>
+        <div><dt>Seña para reservar</dt><dd id="svc-deposit"></dd></div>
+      </dl>
+      <div class="actions">
+        <button class="btn btn-ghost" type="button" data-close>Volver</button>
+        <button class="btn btn-primary" type="button" id="go-step-2">Elegir turno</button>
+      </div>
+    </div>
+
+    <div class="step" data-panel="2" hidden>
+      <p class="eyebrow">Elegí tu turno</p>
+      <h2 id="step2-title"></h2>
+      <h3 class="mini-title">Día</h3>
+      <div class="date-strip" id="date-strip" role="listbox" aria-label="Días disponibles"></div>
+      <h3 class="mini-title">Horario</h3>
+      <div class="time-grid" id="time-grid" aria-live="polite"><p class="muted">Elegí un día para ver los horarios.</p></div>
+      <div class="actions">
+        <button class="btn btn-ghost" type="button" data-back="1">Atrás</button>
+        <button class="btn btn-primary" type="button" id="go-step-3" disabled>Continuar</button>
+      </div>
+    </div>
+
+    <div class="step" data-panel="3" hidden>
+      <p class="eyebrow">Tus datos y seña</p>
+      <h2>Confirmá tu reserva</h2>
+      <div class="summary" id="summary"></div>
+      <form id="booking-form" novalidate>
+        <label>Nombre y apellido
+          <input name="name" autocomplete="name" required maxlength="80">
+        </label>
+        <label>Teléfono / WhatsApp
+          <input name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="30">
+        </label>
+        <label>Email <span class="optional">(opcional)</span>
+          <input name="email" type="email" autocomplete="email" maxlength="120">
+        </label>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+        <p class="demo-banner" id="demo-banner" hidden>Modo demo: el pago es simulado y no se cobra nada.</p>
+        <div class="actions">
+          <button class="btn btn-ghost" type="button" data-back="2">Atrás</button>
+          <button class="btn btn-primary" type="submit" id="pay-btn">Pagar seña</button>
+        </div>
+        <p class="note small">Tenés 15 minutos para completar el pago; pasado ese tiempo el horario se libera.</p>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="/js/app.js" type="module"></script>
+</body>
+</html>
