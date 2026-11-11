@@ -9,7 +9,7 @@
     "db:local": "wrangler d1 migrations apply chivas-db --local",
     "dev": "wrangler pages dev",
     "db:remote": "wrangler d1 migrations apply chivas-db --remote",
-    "deploy": "wrangler pages deploy",
+    "deploy": "wrangler pages deploy public",
     "test:smoke": "node scripts/smoke-test.mjs"
   },
   "devDependencies": {

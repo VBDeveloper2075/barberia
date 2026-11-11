@@ -8,10 +8,11 @@ pages_build_output_dir = "./public"
 # - En local (wrangler pages dev) el database_id puede quedar así.
 # - Para desplegar, reemplazalo por el ID real que devuelve:
 #     npx wrangler d1 create chivas-db
+
 [[d1_databases]]
-binding = "DB"
-database_name = "chivas-db"
-database_id = "00000000-0000-0000-0000-000000000000"
+binding = "barberia_db"
+database_name = "barberia-db"
+database_id = "0edd44ef-fbc5-4058-8ca6-7b225984459d"
 migrations_dir = "migrations"
 
 # Variables NO secretas (opcionales). Los secretos van en .dev.vars (local)
