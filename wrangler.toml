@@ -1,0 +1,20 @@
+name = "chivas-barberia"
+compatibility_date = "2025-06-01"
+
+# Carpeta que se publica como sitio estático.
+pages_build_output_dir = "./public"
+
+# Base de datos D1 (turnos). Se usa como env.DB dentro de las Functions.
+# - En local (wrangler pages dev) el database_id puede quedar así.
+# - Para desplegar, reemplazalo por el ID real que devuelve:
+#     npx wrangler d1 create chivas-db
+[[d1_databases]]
+binding = "DB"
+database_name = "chivas-db"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
+
+# Variables NO secretas (opcionales). Los secretos van en .dev.vars (local)
+# o con `npx wrangler pages secret put NOMBRE` (producción).
+# [vars]
+# PUBLIC_URL = "https://www.tubarberia.com"

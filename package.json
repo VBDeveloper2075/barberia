@@ -1,18 +1,18 @@
 {
   "name": "chivas-barberia",
-  "version": "1.0.0",
-  "description": "Sitio web y sistema de turnos de Chivas Barbería",
+  "version": "2.0.0",
+  "description": "Sitio web y turnero de Chivas Barbería (Jamstack: HTML/CSS/JS estático + Cloudflare Pages Functions + D1)",
   "type": "module",
-  "main": "server/index.js",
   "private": true,
-  "engines": {
-    "node": ">=22.13"
-  },
   "scripts": {
-    "start": "node server/index.js",
-    "dev": "node --watch server/index.js"
+    "build": "echo Sin paso de build: se publica la carpeta public/",
+    "db:local": "wrangler d1 migrations apply chivas-db --local",
+    "dev": "wrangler pages dev",
+    "db:remote": "wrangler d1 migrations apply chivas-db --remote",
+    "deploy": "wrangler pages deploy",
+    "test:smoke": "node scripts/smoke-test.mjs"
   },
-  "dependencies": {
-    "express": "^5.1.0"
+  "devDependencies": {
+    "wrangler": "^4.160.0"
   }
 }

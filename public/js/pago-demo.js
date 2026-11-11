@@ -45,7 +45,7 @@ $('#pay').addEventListener('click', async () => {
     btn.disabled = false;
     return fail(data.error);
   }
-  location.href = `/reserva.html?t=${encodeURIComponent(token)}`;
+  location.href = `/reserva?t=${encodeURIComponent(token)}`;
 });
 
 load();

@@ -1,0 +1,19 @@
+# Copiar como ".dev.vars" (solo para desarrollo local, no se sube a git).
+# En producción se cargan con: npx wrangler pages secret put NOMBRE
+
+# Usuario y clave del dueño para /admin
+ADMIN_USER=admin
+ADMIN_PASSWORD=cambiame-por-una-clave-larga
+
+# Texto aleatorio largo (32+ caracteres) para firmar la sesión del dueño.
+# Generar uno:  node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+SESSION_SECRET=reemplazar-por-un-texto-aleatorio-de-32-o-mas-caracteres
+
+# Pagos. Usar UNA de las dos opciones:
+# 1) Modo demo (pago simulado, NO cobra). Solo para pruebas locales:
+DEMO_MODE=true
+# 2) Mercado Pago real (Access Token de la cuenta del dueño). Con esto, quitar DEMO_MODE:
+# MP_ACCESS_TOKEN=APP_USR-xxxxxxxx
+
+# URL pública del sitio (opcional; por defecto se usa el dominio de la petición).
+# PUBLIC_URL=https://www.tubarberia.com
