@@ -13,15 +13,17 @@ export async function onRequestPost({ request, env }) {
     throw new HttpError(429, 'Demasiados intentos. Probá de nuevo en unos minutos.');
   }
 
-  const { serviceId, date, time, name, phone, email } = await readJson(request);
+  const { serviceId, date, time, name, lastName, phone, email } = await readJson(request);
   const service = getService(serviceId);
   if (!service) throw new HttpError(400, 'Servicio inválido.');
   if (!isValidDate(date) || !/^\d{2}:\d{2}$/.test(String(time))) throw new HttpError(400, 'Fecha u horario inválido.');
 
   const cleanName = String(name || '').trim().replace(/\s+/g, ' ');
+  const cleanLastName = String(lastName || '').trim().replace(/\s+/g, ' ');
   const phoneNorm = String(phone || '').replace(/\D/g, '');
   const cleanEmail = String(email || '').trim();
-  if (cleanName.length < 2 || cleanName.length > 80) throw new HttpError(400, 'Ingresá tu nombre.');
+  if (cleanName.length < 2 || cleanName.length > 60) throw new HttpError(400, 'Ingresá tu nombre.');
+  if (cleanLastName.length < 2 || cleanLastName.length > 60) throw new HttpError(400, 'Ingresá tu apellido.');
   if (phoneNorm.length < 8 || phoneNorm.length > 15) throw new HttpError(400, 'Ingresá un teléfono válido.');
   if (cleanEmail && (cleanEmail.length > 120 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail))) {
     throw new HttpError(400, 'El email no es válido.');
@@ -42,6 +44,7 @@ export async function onRequestPost({ request, env }) {
     time,
     start_min: toMin(time),
     name: cleanName,
+    last_name: cleanLastName,
     phone: String(phone).trim().slice(0, 30),
     phone_norm: phoneNorm,
     email: cleanEmail || null,

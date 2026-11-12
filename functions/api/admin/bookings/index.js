@@ -26,13 +26,13 @@ export async function onRequestGet({ request, env }) {
   let where = scope.where;
   const binds = [];
   if (q) {
-    where += ' AND (name LIKE ?1 OR phone LIKE ?1 OR email LIKE ?1)';
+    where += ' AND (name LIKE ?1 OR last_name LIKE ?1 OR phone LIKE ?1 OR email LIKE ?1)';
     binds.push(`%${q}%`);
   }
 
   const rows = await env.DB
     .prepare(
-      `SELECT b.id, b.service_name, b.service_price, b.date, b.time, b.name, b.phone, b.email, b.status,
+      `SELECT b.id, b.service_name, b.service_price, b.date, b.time, b.name, b.last_name, b.phone, b.email, b.status,
               b.deposit, b.payment_id, b.paid_at,
               (SELECT COUNT(*) FROM bookings x WHERE x.phone_norm = b.phone_norm AND x.status = 'completed') AS completed_count
        FROM bookings b WHERE ${where} ORDER BY ${scope.order} LIMIT 500`,

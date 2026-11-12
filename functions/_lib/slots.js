@@ -54,14 +54,14 @@ export async function insertBookingIfFree(db, b) {
   const result = await db
     .prepare(
       `INSERT INTO bookings (token, service_id, service_name, service_price, duration, date, time, start_min,
-         name, phone, phone_norm, email, deposit, expires_at, created_at)
-       SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+         name, last_name, phone, phone_norm, email, deposit, expires_at, created_at)
+       SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
        WHERE (SELECT COUNT(*) FROM bookings
               WHERE date = ? AND start_min < ? AND start_min + duration > ? AND ${ACTIVE_SQL}) < ?`,
     )
     .bind(
       b.token, b.service_id, b.service_name, b.service_price, b.duration, b.date, b.time, b.start_min,
-      b.name, b.phone, b.phone_norm, b.email, b.deposit, b.expires_at, b.created_at,
+      b.name, b.last_name, b.phone, b.phone_norm, b.email, b.deposit, b.expires_at, b.created_at,
       b.date, end, b.start_min, Date.now(), config.capacity,
     )
     .run();

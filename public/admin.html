@@ -20,11 +20,8 @@
       <p class="eyebrow">Chivas Barbería</p>
       <h1>Acceso dueño</h1>
       <form id="login-form" novalidate>
-        <label>Usuario
-          <input name="username" autocomplete="username" required>
-        </label>
-        <label>Clave
-          <input name="password" type="password" autocomplete="current-password" required>
+        <label>Contraseña
+          <input name="password" type="password" autocomplete="current-password" required autofocus>
         </label>
         <p class="form-error" id="login-error" role="alert" hidden></p>
         <button class="btn btn-primary" type="submit" id="login-btn">Ingresar</button>
@@ -62,14 +59,14 @@
           <button class="chip" data-scope="attention" aria-pressed="false">Atención</button>
           <button class="chip" data-scope="cancelled" aria-pressed="false">Cancelados</button>
         </div>
-        <input type="search" id="search" placeholder="Buscar por nombre, teléfono o email" aria-label="Buscar cliente">
+        <input type="search" id="search" placeholder="Buscar por nombre, apellido, teléfono o email" aria-label="Buscar cliente">
       </div>
 
       <p class="muted" id="empty" hidden>No hay turnos para mostrar.</p>
       <div class="table-wrap">
         <table id="table" hidden>
           <thead>
-            <tr><th>Día</th><th>Hora</th><th>Cliente</th><th>Contacto</th><th>Servicio</th><th>Seña</th><th>Fidelidad</th><th>Estado</th><th></th></tr>
+            <tr><th>Fecha</th><th>Hora</th><th>Nombre</th><th>Apellido</th><th>Teléfono</th><th>Email</th><th>Servicio</th><th>Seña</th><th>Fidelidad</th><th>Estado</th><th></th></tr>
           </thead>
           <tbody id="rows"></tbody>
         </table>

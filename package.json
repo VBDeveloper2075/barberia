@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "build": "echo Sin paso de build: se publica la carpeta public/",
-    "db:local": "wrangler d1 migrations apply chivas-db --local",
+    "db:local": "wrangler d1 migrations apply barberia-db --local",
     "dev": "wrangler pages dev",
-    "db:remote": "wrangler d1 migrations apply chivas-db --remote",
+    "db:remote": "wrangler d1 migrations apply barberia-db --remote",
     "deploy": "wrangler pages deploy public",
     "test:smoke": "node scripts/smoke-test.mjs"
   },

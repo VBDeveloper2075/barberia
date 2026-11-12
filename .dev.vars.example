@@ -1,8 +1,7 @@
 # Copiar como ".dev.vars" (solo para desarrollo local, no se sube a git).
 # En producción se cargan con: npx wrangler pages secret put NOMBRE
 
-# Usuario y clave del dueño para /admin
-ADMIN_USER=admin
+# Contraseña del dueño para /admin
 ADMIN_PASSWORD=cambiame-por-una-clave-larga
 
 # Texto aleatorio largo (32+ caracteres) para firmar la sesión del dueño.

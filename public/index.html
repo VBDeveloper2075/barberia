@@ -184,8 +184,11 @@
       <h2>Confirmá tu reserva</h2>
       <div class="summary" id="summary"></div>
       <form id="booking-form" novalidate>
-        <label>Nombre y apellido
-          <input name="name" autocomplete="name" required maxlength="80">
+        <label>Nombre
+          <input name="name" autocomplete="given-name" required maxlength="60">
+        </label>
+        <label>Apellido
+          <input name="lastName" autocomplete="family-name" required maxlength="60">
         </label>
         <label>Teléfono / WhatsApp
           <input name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="30">

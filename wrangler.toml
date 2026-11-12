@@ -1,4 +1,4 @@
-name = "chivas-barberia"
+name = "barberia"
 compatibility_date = "2025-06-01"
 
 # Carpeta que se publica como sitio estático.
@@ -10,7 +10,7 @@ pages_build_output_dir = "./public"
 #     npx wrangler d1 create chivas-db
 
 [[d1_databases]]
-binding = "barberia_db"
+binding = "DB"   # el código de /functions lee env.DB: no cambiar este nombre
 database_name = "barberia-db"
 database_id = "0edd44ef-fbc5-4058-8ca6-7b225984459d"
 migrations_dir = "migrations"

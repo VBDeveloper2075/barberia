@@ -74,6 +74,14 @@ function actionBtn(label, status, id) {
   return b;
 }
 
+function emailCell(email) {
+  if (!email) return document.createTextNode('—');
+  const a = document.createElement('a');
+  a.href = `mailto:${email}`;
+  a.textContent = email;
+  return a;
+}
+
 function loyaltyCell(count, total) {
   const cycle = count % (total + 1);
   if (cycle >= total) {
@@ -116,10 +124,12 @@ function renderRows(data) {
     actionsTd.className = 'actions-cell';
 
     tr.append(
-      cell('Día', withSub(document.createTextNode(`${day}/${m}/${y}`), DAYS[d.getUTCDay()])),
+      cell('Fecha', withSub(document.createTextNode(`${day}/${m}/${y}`), DAYS[d.getUTCDay()])),
       cell('Hora', document.createTextNode(`${b.time} h`)),
-      cell('Cliente', document.createTextNode(b.name)),
-      cell('Contacto', withSub(phone, b.email)),
+      cell('Nombre', document.createTextNode(b.name)),
+      cell('Apellido', document.createTextNode(b.last_name || '—')),
+      cell('Teléfono', phone),
+      cell('Email', emailCell(b.email)),
       cell('Servicio', withSub(document.createTextNode(b.service_name), money.format(b.service_price))),
       cell('Seña', document.createTextNode(['confirmed', 'completed', 'refund'].includes(b.status) ? money.format(b.deposit) : '—')),
       cell('Fidelidad', loyaltyCell(b.completed_count, data.loyaltyStamps)),
